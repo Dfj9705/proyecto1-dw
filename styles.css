@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+*,
+*::after,
+*::before {
+ box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F1F1F1;
+    color: #2C3E50 ;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+nav{
+    background-color: #007BFF ;
+    color: #FFF;
+    padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+}
+
+nav .logo{
+    text-decoration: none;
+    color: inherit;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+nav .logo img{
+    width: 65px;
+    margin-right: 1rem;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    flex: 2;    
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li{
+    text-align: center;
+    width: 12rem;
+    font-size: 1.5rem;
+    padding: 2rem;
+    height: 100%
+}
+
+nav ul li:hover, .active{
+    background-color:#004186;
+}
+
+nav .cartIcon{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#contador {
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 20px;
+    min-height: 20px;
+  }
+nav .cartIcon:hover{
+    color:#2C3E50;
+
+}
+nav .enlaces{
+flex: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+header{
+    color: #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./assets/img/store.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: overlay;
+}
+
+header h1{
+    font-size: 5rem;
+}
+header p{
+    font-size: 2rem;
+}
+
+main{
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+}
+
+
+article{
+    flex: 3;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+article .productos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card{
+    border: 0.5px solid #6a7f95 ;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    width: 20%;
+
+}
+.card:hover{
+    background-color: #007BFF;
+    cursor: pointer;
+    color: white
+}
+.card img{
+    width: 100%;
+}
+
+.card-title{
+    font-size: 1.5rem;
+}
+
+.card-desc{
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.carrito{
+    height: 400px;
+    max-height: 400px;
+    min-height: 400px;
+    border: 2px solid black;
+    background-image: url('./assets/img/malla.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-color: rgba(217, 217, 217, 0.5); 
+    background-blend-mode: overlay;
+    border-radius: 20px 20px 80px 80px;
+    position: sticky;
+    top: 7rem;
+    /* display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0; */
+
+}
+
+aside{
+    flex:1;
+    padding: 2rem;
+}
+
+aside ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+aside ul li{
+    padding: 1rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 2px #c3c3c3 solid;
+    margin-bottom: 0.5rem;
+    background: #e7e7e7;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 2px 1px #ababab;
+}
+
+aside ul li img{
+    border-radius: 50%;
+    width: 35px;
+    margin-right: 0.5rem;
+}
+
+footer{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent .child {
+    pointer-events: none;
+  }
+
+@media (max-width: 720px) {
+    nav{
+        padding: 0 1rem;
+    }
+    nav .logo{
+        font-size: 1.6rem;
+    }
+    nav, nav ul{
+        flex-direction: column;
+    }
+
+    nav ul li{
+        padding: 0.5rem;
+        width: 100%;
+    }
+    main{
+        flex-direction: column;
+    }
+    .productos{
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+    }
+}

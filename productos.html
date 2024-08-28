@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tienda virtual</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="shortcut icon" href="./assets/iconos/computadora-portatil.png" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <nav>
+            <a class="logo" href="index.html"> <img src="./assets/iconos/computadora-portatil.png" alt="logo de la app"
+                    width="35px"> Tienda
+                Online</a>
+            <div class="enlaces">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="active"><a href="productos.html">Productos</a></li>
+                </ul>
+
+                <a class="cartIcon" href="/pago.html">
+                    <i class="fas fa-cart-shopping fa-xl"></i>
+                    <span id="contador">0</span>
+
+                </a>
+            </div>
+        </nav>
+        <header>
+            <h1>Carrito de compras</h1>
+            <p>Ubicación: <span id="lugar"></span></p>
+
+        </header>
+        <main>
+            <article>
+                <h2>Productos disponibles</h2>
+                <section class="productos">
+                    <div class="card parent" data-nombre="Limon" data-precio="5" id="card1" draggable="true"
+                        ondragstart="drag(event)">
+                        <img src="./assets/img/productos/limon.png" alt="" class="child">
+                        <h5 class="card-title">Limon</h5>
+                        <p class="card-desc">Precio: Q. 5.00</p>
+                    </div>
+                    <div class="card parent" data-nombre="Manzana" data-precio="2" id="card2" draggable="true"
+                        ondragstart="drag(event)">
+                        <img src="./assets/img/productos/manzana.png" alt="" class="child">
+                        <h5 class="card-title">Manzana</h5>
+                        <p class="card-desc">Precio: Q. 2.00</p>
+                    </div>
+                    <div class="card parent" data-nombre="Tomate" data-precio="1" id="card3" draggable="true"
+                        ondragstart="drag(event)">
+                        <img src="./assets/img/productos/tomate.png" alt="" class="child">
+                        <h5 class="card-title">Tomate</h5>
+                        <p class="card-desc">Precio: Q. 1.00</p>
+                    </div>
+                    <div class="card parent" data-nombre="Uva" data-precio="10" id="card4" draggable="true"
+                        ondragstart="drag(event)">
+                        <img src="./assets/img/productos/uva.png" alt="" class="child">
+                        <h5 class="card-title">Uva</h5>
+                        <p class="card-desc">Precio: Q. 10.00</p>
+                    </div>
+                    <div class="card parent" data-nombre="Arandano" data-precio="6" id="card5" draggable="true"
+                        ondragstart="drag(event)">
+                        <img src="./assets/img/productos/arandano-rojo.png" alt="" class="child">
+                        <h5 class="card-title">Arandano</h5>
+                        <p class="card-desc">Precio: Q. 6.00</p>
+                    </div>
+                    <div class="card parent" data-nombre="Baya" data-precio="7.5" id="card6" draggable="true"
+                        ondragstart="drag(event)">
+                        <img src="./assets/img/productos/baya.png" alt="" class="child">
+                        <h5 class="card-title">Baya</h5>
+                        <p class="card-desc">Precio: Q. 7.50</p>
+                    </div>
+                    <div class="card parent" data-nombre="Repollo" data-precio="4" id="card7" draggable="true"
+                        ondragstart="drag(event)">
+                        <img src="./assets/img/productos/repollo.png" alt="" class="child">
+                        <h5 class="card-title">Repollo</h5>
+                        <p class="card-desc">Precio: Q. 4.00</p>
+                    </div>
+                    <div class="card parent" data-nombre="Naranja" data-precio="11" id="card8" draggable="true"
+                        ondragstart="drag(event)">
+                        <img src="./assets/img/productos/naranja.png" alt="" class="child">
+                        <h5 class="card-title">Naranja</h5>
+                        <p class="card-desc">Precio: Q. 11.00</p>
+                    </div>
+                    <div class="card parent" data-nombre="Durazno" data-precio="7" id="card9" draggable="true"
+                        ondragstart="drag(event)">
+                        <img src="./assets/img/productos/durazno.png" alt="" class="child">
+                        <h5 class="card-title">Durazno</h5>
+                        <p class="card-desc">Precio: Q. 7.00</p>
+                    </div>
+                </section>
+            </article>
+            <aside>
+                <h3>Carrito de compras</h3>
+                <p>Arrastre los productos hacia la cesta</p>
+                <div class="carrito" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                </div>
+            </aside>
+        </main>
+        <footer>
+            Grupo No. 5. Todos los derechos reservados &copy;
+        </footer>
+        <script src="https://kit.fontawesome.com/0ac58cc75c.js" crossorigin="anonymous"></script>
+    </body>
+    <script src="https://kit.fontawesome.com/0ac58cc75c.js" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+    <script src="cart.js"></script>
+
+</html>

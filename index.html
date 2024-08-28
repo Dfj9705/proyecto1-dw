@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tienda virtual</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="shortcut icon" href="./assets/iconos/computadora-portatil.png" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <nav>
+            <a class="logo" href="index.html">
+                <img src="./assets/iconos/computadora-portatil.png" alt="logo de la app" width="35px">Tienda
+                Online</a>
+            <div class="enlaces">
+                <ul>
+                    <li class="active"><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                </ul>
+
+                <a class="cartIcon" href="/pago.html">
+                    <i class="fas fa-cart-shopping fa-xl"></i>
+                    <span id="contador">0</span>
+
+                </a>
+            </div>
+        </nav>
+        <header>
+            <h1>Tienda Online</h1>
+            <p>Ubicación: <span id="lugar"></span></p>
+        </header>
+        <main>
+            <article>
+                <h2>Productos más vendidos</h2>
+                <section class="productos">
+                    <div class="card">
+                        <img src="./assets/img/productos/limon.png" alt="">
+                        <h5 class="card-title">Limon</h5>
+                        <p class="card-desc">Precio: Q. 5.00</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/productos/manzana.png" alt="">
+                        <h5 class="card-title">Manzana</h5>
+                        <p class="card-desc">Precio: Q. 2.00</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/productos/tomate.png" alt="">
+                        <h5 class="card-title">Tomate</h5>
+                        <p class="card-desc">Precio: Q. 1.00</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/productos/uva.png" alt="">
+                        <h5 class="card-title">Uva</h5>
+                        <p class="card-desc">Precio: Q. 10.00</p>
+                    </div>
+                </section>
+            </article>
+            <aside>
+                <h3>Integrantes del grupo</h3>
+                <ul>
+                    <li>
+                        <img src="./assets/img/usuario.png" alt="Persona 1"> ABNER DANIEL FUENTES JUAREZ
+                    </li>
+                    <li>
+                        <img src="./assets/img/usuario.png" alt="Persona 2"> BRANDON JORGE MARIO ADOLFO SÁNCHEZ
+                    </li>
+                    <li>
+                        <img src="./assets/img/usuario.png" alt="Persona 3"> ERICK RONEL CÁRDENAS CARDENAS
+                    </li>
+                    <li>
+                        <img src="./assets/img/usuario.png" alt="Persona 4"> JEFREEY FERNANDO ARTURO PEREZ LOPEZ
+                    </li>
+                    <li>
+                        <img src="./assets/img/usuario.png" alt="Persona 5"> STEPHANY GABRIELA HERNANDEZ CAMPOS
+                    </li>
+                </ul>
+            </aside>
+        </main>
+        <footer>
+            Grupo No. 5. Todos los derechos reservados &copy;
+        </footer>
+        <script src="https://kit.fontawesome.com/0ac58cc75c.js" crossorigin="anonymous"></script>
+        <script src="scripts.js"></script>
+    </body>
+
+</html>
