@@ -33,7 +33,7 @@ if (navigator.geolocation) {
 
 const contarProductos = () => {
     let productos = JSON.parse(localStorage.getItem('productos'))
-    let cantidad = productos.length
+    let cantidad = productos ? productos.length : 0
     document.getElementById('contador').innerText = cantidad
 }
 

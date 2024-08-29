@@ -241,6 +241,66 @@ footer{
     pointer-events: none;
   }
 
+  table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin: 20px 0; 
+}
+
+
+th {
+    background-color: skyblue; 
+    padding: 10px; 
+}
+
+
+td {
+    padding: 8px; 
+    border: 1px solid #ddd;
+}
+
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+
+table, th, td {
+    border: 1px solid #ddd; 
+}
+
+
+table {
+    border: 1px solid #1882ac; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.btn-danger{
+    background-color: rgb(255, 63, 63);
+    color: white;
+    border-radius: 0.5rem;
+    border: 0.5px solid red;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.btn-danger:hover{
+    background-color: rgb(255, 15, 15);
+}
+
+.totales{
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+#spanProductosTotal, #spanPrecioTotal{
+    color: green
+}
 @media (max-width: 720px) {
     nav{
         padding: 0 1rem;

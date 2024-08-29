@@ -1,4 +1,4 @@
-let productos = JSON.parse(localStorage.getItem('productos'));
+let productos = JSON.parse(localStorage.getItem('productos')) ? JSON.parse(localStorage.getItem('productos')) : [];
 
 function drag(ev) {
     ev.stopPropagation();
@@ -29,7 +29,7 @@ function drop(ev) {
     img.style.margin = 0
 
     let nuevoProducto = {
-        id: productos.length + 1,
+        id: productos ? productos.length + 1 : 1,
         nombre: ev.dataTransfer.getData('nombre'),
         precio: ev.dataTransfer.getData('precio')
     }

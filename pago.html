@@ -4,11 +4,68 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Tienda virtual</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="shortcut icon" href="./assets/iconos/computadora-portatil.png" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
+        <nav>
+            <a class="logo" href="index.html">
+                <img src="./assets/iconos/computadora-portatil.png" alt="logo de la app" width="35px">Tienda
+                Online</a>
+            <div class="enlaces">
+                <ul>
+                    <li class="active"><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                </ul>
 
+                <a class="cartIcon" href="pago.html">
+                    <i class="fas fa-cart-shopping fa-xl"></i>
+                    <span id="contador">0</span>
+
+                </a>
+            </div>
+        </nav>
+        <header>
+            <h1>Pago de productos</h1>
+            <p>Ubicación: <span id="lugar"></span></p>
+        </header>
+        <main>
+            <article>
+                <h2>Productos en el carrito</h2>
+                <table id="tablaProductos">
+                    <thead>
+                        <tr>
+                            <th>NO.</th>
+                            <th>PRODUCTO</th>
+                            <th>PRECIO</th>
+                            <th>QUITAR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+
+            </article>
+            <aside>
+                <h2>Totales</h2>
+                <div class="totales">
+                    <p>No. de productos: <span id="spanProductosTotal"></span></p>
+                    <p>Precio total: <span id="spanPrecioTotal"></span></p>
+                </div>
+            </aside>
+
+        </main>
+        <footer>
+            Grupo No. 5. Todos los derechos reservados &copy;
+        </footer>
+        <script src="https://kit.fontawesome.com/0ac58cc75c.js" crossorigin="anonymous"></script>
+        <script src="scripts.js"></script>
+        <script src="pago.js"></script>
     </body>
 
 </html>
