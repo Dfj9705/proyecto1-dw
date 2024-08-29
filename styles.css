@@ -280,6 +280,20 @@ table {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
+table input[type="number"]{
+    width: 100px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+table input[type="number"]:focus {
+    border-color: #007bff; /* Color azul al hacer foco */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
 .btn-danger{
     background-color: rgb(255, 63, 63);
     color: white;
