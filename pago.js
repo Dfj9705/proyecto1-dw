@@ -58,7 +58,10 @@ const obtenerProductos = () => {
         fragment.appendChild(tr)
     }
     console.log(totalPrecio);
-    totalProductos = productos ? productos.length : 0
+    totalProductos = 0
+    productos.forEach(p => {
+        totalProductos += parseInt(p.cantidad)
+    });
     tablaProductos.tBodies[0].appendChild(fragment)
 
 }
