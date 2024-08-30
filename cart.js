@@ -60,3 +60,45 @@ function drop(ev) {
     contarProductos();
     ev.target.appendChild(img);
 }
+
+const agregarProducto = (e) => {
+    productos = JSON.parse(localStorage.getItem('productos')) ? JSON.parse(localStorage.getItem('productos')) : []
+    const card = e.target.parentElement
+    const nombre = card.dataset.nombre
+    const precio = card.dataset.precio
+
+    let nuevoProducto = {
+        nombre,
+        precio,
+        cantidad: 1
+    }
+    let existe = false;
+    if (productos.length > 0) {
+        let nombreBuscado = nuevoProducto.nombre
+        productos.forEach(obj => {
+            if (obj.nombre === nombreBuscado) {
+                obj.cantidad++
+                existe = true
+            }
+        })
+
+        if (!existe) {
+            productos = [...productos, nuevoProducto]
+        }
+
+    } else {
+        // console.log('agregar')
+        productos = [...productos, nuevoProducto]
+    }
+
+    console.log(productos);
+
+    localStorage.removeItem('productos')
+
+    localStorage.setItem('productos', JSON.stringify(productos))
+    contarProductos();
+}
+
+document.querySelectorAll('.btn-primary').forEach(b => {
+    b.addEventListener('click', agregarProducto)
+})
